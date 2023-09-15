@@ -1,0 +1,184 @@
+:root {
+  --top-title-font-size: 19px;
+  --title-number-color: #8080807e;
+  --planet-buttons-font-size: 19px;
+  --soft-blue: #d0d6f9;
+  --planet-name-font-size: 60px;
+  --stat-value-font-size: 34px;
+  --para-padding: 30px;
+  --para-font-size: 16px;
+}
+
+.total-content-destin {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding-top: 120px;
+}
+.top-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.top-container > h1 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 2.5em;
+  font-size: var(--top-title-font-size);
+}
+.top-container > h1 > span {
+  margin-right: 1em;
+  font-weight: 700;
+  color: var(--title-number-color);
+  font-size: var(--top-title-font-size);
+}
+.planet-image-container {
+  aspect-ratio: 1/1;
+  width: 50%;
+}
+.planet-image-container > img {
+  width: 100%;
+  height: 100%;
+}
+.destin-btns-container {
+  margin-top: 8vw;
+}
+.destin-btns-container > ul {
+  text-transform: uppercase;
+  list-style: none;
+  color: #d0d6f9;
+  font-size: var(--planet-buttons-font-size);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.destin-btns-container > ul > li {
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  padding: 0px 0.95em;
+}
+.destin-btns-container > ul > li > input {
+  position: absolute;
+  top: -20px;
+  appearance: none;
+}
+.destin-btns-container > ul > li > p {
+  transition: 0.3s;
+  padding-bottom: 0.5em;
+}
+.destin-btns-container > ul > li > input:checked ~ p {
+  color: white;
+  border-bottom: 3px solid white;
+}
+.middle-container {
+  border-bottom: 1px solid #d0d6f948;
+  padding: 2.5em 0px;
+  margin: 0px var(--para-padding);
+  text-align: center;
+}
+.middle-container > h1 {
+  margin: 0px 0px 0.15em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: var(--planet-name-font-size);
+}
+.middle-container > p {
+  font-size: var(--para-font-size);
+  color: var(--soft-blue);
+  line-height: 1.5em;
+  letter-spacing: 0.025em;
+}
+.bottom-conatiner {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 40px 0px;
+}
+.bottom-common {
+  margin-bottom: 40px;
+}
+.bottom-common > h2 {
+  font-size: var(--stat-value-font-size);
+  margin: 0.35em 0px;
+}
+.bottom-common > h4 {
+  letter-spacing: 0.05em;
+  color: var(--soft-blue);
+  font-weight: 400;
+  font-size: var(--planet-buttons-font-size);
+}
+@media (min-width: 768px) {
+  :root {
+    --para-padding: 100px;
+    --h1-left-margin: 75px;
+  }
+  .total-content-destin {
+    padding-top: 170px;
+  }
+  .top-container > h1 {
+    margin-left: var(--h1-left-margin);
+    margin-bottom: 4em;
+    width: 100%;
+    text-align: start;
+  }
+  .bottom-conatiner {
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1201px) {
+  :root {
+    /* --top-title-font-size: 19px; */
+    --top-title-font-size: clamp(1.188rem, 0.42rem + 1.023vw, 2.875rem);
+    /* --planet-buttons-font-size: 19px; */
+    --planet-buttons-font-size: clamp(1.188rem, 0.42rem + 1.023vw, 2.875rem);
+    --soft-blue: #d0d6f9;
+    /* --planet-name-font-size: 60px; */
+    --planet-name-font-size: clamp(3.75rem, 1.475rem + 3.031vw, 8.75rem);
+    /* --stat-value-font-size: 34px; */
+    --stat-value-font-size: clamp(2.125rem, 0.987rem + 1.516vw, 4.625rem);
+    /* --para-font-size: 16px; */
+    --para-font-size: clamp(1rem, 0.545rem + 0.606vw, 2rem);
+    --para-padding: 0px;
+    --h1-left-margin: 0px;
+  }
+  .total-content-destin {
+    /* padding: 130px 90px 0px 50px; */
+    padding: clamp(8.125rem, 4.001rem + 5.495vw, 17.188rem)
+      clamp(5.625rem, 3.918rem + 2.274vw, 9.375rem) 50px
+      clamp(3.125rem, 1.703rem + 1.895vw, 6.25rem);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .top-container {
+    width: 60%;
+  }
+  .right-container {
+    margin-top: 100px;
+    width: 40%;
+  }
+  .destin-btns-container {
+    margin: 0px var(--para-padding);
+  }
+  .destin-btns-container > ul {
+    justify-content: start;
+  }
+  .destin-btns-container > ul > li {
+    margin-right: 1.85em;
+    padding: 0px;
+  }
+  .middle-container {
+    text-align: start;
+  }
+  .planet-image-container {
+    max-width: 1150px;
+    aspect-ratio: 1/1;
+    width: 70%;
+  }
+}

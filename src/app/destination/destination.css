@@ -1,0 +1,5 @@
+.total-content-destination {
+  background-image: url("../../Images/destination-bg-all.jpg");
+  background-size: cover;
+  min-height: 100vh;
+}
