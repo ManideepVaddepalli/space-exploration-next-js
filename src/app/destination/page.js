@@ -1,5 +1,5 @@
 import React from "react";
-import "./destination.css";
+import "./page.css";
 import Destin from "@/components/destination/Destin";
 
 export default function Destination() {

@@ -68,7 +68,6 @@ export default function Destin() {
           <Image src={data.planetImg} alt="planet-img" />
         </div>
       </div>
-
       <div className="right-container">
         <div className="destin-btns-container">
           <ul className={barlowCondensed.className}>
